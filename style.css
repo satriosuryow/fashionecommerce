@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+h6 {
+  color: #d8d8d8;
+}
+button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: #1d1d1d;
+  color: aliceblue;
+  padding: 13px 30px;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+button:hover {
+  background-color: #3a3833;
+}
+hr {
+  width: 30px;
+  height: 2px;
+  background-color: #fb774b;
+}
+.star {
+  padding: 10px 0;
+}
+.star i {
+  font-size: 0.8rem;
+  color: goldenrod;
+}
+.navbar {
+  font-size: 16px;
+  top: 0;
+  left: 0;
+}
+.navbar .navbar-nav .nav-link {
+  padding: 0 20px;
+  color: #000;
+  transition: 0.3 ease;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.acive,
+.navbar i:hover,
+.navbar i.active {
+  color: coral;
+}
+.navbar i {
+  font-size: 1.2rem;
+  padding: 0 7px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.navbar .navbar-toggler {
+  border: none;
+  outline: none;
+}
+#bar {
+  font-size: 1.5rem;
+  padding: 7px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+  color: #000;
+}
+#bar:hover,
+#bar.active {
+  color: #fff;
+}
+
+/* mobile nav  */
+
+@media only screen and (max-width: 991px) {
+  body > nav > div > button:hover,
+  body > nav > div > button:focus {
+    background-color: #fb774b;
+  }
+
+  body > nav > div > button:hover #bar,
+  body > nav > div > button:focus #bar {
+    color: #fff;
+  }
+  .navbar .navbar-nav {
+    margin: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+  .navbar .navbar-nav .nav-item {
+    padding: 10px 0;
+  }
+}
+
+#home {
+  background-image: url("img/back.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: top 60px center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#home span {
+  color: coral;
+}
+
+#new .one img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#new .one .details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+#new .one:hover .details {
+  cursor: pointer;
+  background-color: rgba(245, 178, 178, 0.6);
+}
+
+#new .one .details button {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2a2a2a;
+  background: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid #2a2a2a;
+  padding: 2.5px;
+  transform: translateY(70px);
+  transition: 0.3s ease;
+}
+#new .one .details button:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+#new .one:nth-child(1) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#new .one:nth-child(2) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#new .one:nth-child(3) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#featured .product,
+#clothes .product,
+#watches .product,
+#shoes .product {
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+#featured .product img,
+#clothes .product img,
+#watches .product img,
+#shoes .product img {
+  transition: 0.3s all;
+}
+#featured .product:hover img,
+#clothes .product:hover img,
+#watches .product:hover img,
+#shoes .product:hover img {
+  transition: 0.3s all;
+  opacity: 0.7;
+}
+#featured .product .buy-button,
+#clothes .product .buy-button,
+#watches .product .buy-button,
+#shoes .product .buy-button {
+  background-color: #fb774b;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.3s all;
+}
+#featured .product:hover .buy-button,
+#clothes .product:hover .buy-button,
+#watches .product:hover .buy-button,
+#shoes .product:hover .buy-button {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.3s all;
+}
+
+#banner {
+  background-image: url("img/banner/2.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-attachment: fixed;
+}
+
+#banner h4 {
+  color: #d8d8d8;
+}
+
+#banner h1 {
+  color: #fff;
+}
+#banner button {
+  background-color: #fb774b;
+}
